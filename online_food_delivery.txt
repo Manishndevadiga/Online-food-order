@@ -37,14 +37,19 @@ mysql> desc customer;
 +------------+--------------+------+-----+---------+-------+
 ***********************************************************************************************************************************************************************
 
-    create table orders(order_id int(10) primary key,
-    rest_id int(10) foreign key references restaurant(rest_id),
-    cust_id int(10) foreign key references customer(cust_id),
-    food_ordered varchar(255),
-    pay_method varchar(255),
-    food_price int(100),
-    quantity int(100),
-    total int(100));
-
+      create table orders(order_id int(10) primary key,
+      rest_id int(10),
+      cust_id int(10),
+      food_ordered varchar(255),
+      pay_method varchar(255),
+      food_price int(100),
+      quantity int(100),
+      total int(100));
+      
+      alter table orders
+      add foreign key(rest_id) references restaurant(rest_id);
+      
+      alter table orders
+      add foreign key(cust_id) references customer(cust_id);
 ***********************************************************************************************************************************************************************
       
