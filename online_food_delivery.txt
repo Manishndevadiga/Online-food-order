@@ -65,5 +65,57 @@ mysql> desc customer;
 | quantity     | int          | YES  |     | NULL    |       |
 | total        | int          | YES  |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
-***********************************************************************************************************************************************************************
-      
+**********************************************************************************************************************************************************************      create table date_time(order_id int(10),
+     rest_id int(10),
+     cust_id int(10),
+     date DATE,time TIME,
+     day varchar(100));
+    
+     alter table date_time
+     add foreign key(rest_id) references restaurant(rest_id);
+    
+     alter table date_time
+     add foreign key(cust_id) references customer(cust_id);
+    
+     alter table date_time
+     add foreign key(order_id) references orders(order_id);
+    
+mysql> desc date_time;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| order_id | int          | YES  | MUL | NULL    |       |
+| rest_id  | int          | YES  | MUL | NULL    |       |
+| cust_id  | int          | YES  | MUL | NULL    |       |
+| date     | date         | YES  |     | NULL    |       |
+| time     | time         | YES  |     | NULL    |       |
+| day      | varchar(100) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+  
+ *********************************************************************************************************************************************************************** 
+     
+     create table delivery(delivery_id int(10) primary key,
+     cust_id int(10),
+     distance varchar(10),
+     cust_add varchar(10) ,
+     rest_id int(10),
+     delivery_charge int(100),
+     net_amt_fd_dlyy int(100));
+     
+     alter table delivery add foreign key(cust_id) references customer(cust_id);
+     
+     alter table delivery add foreign key(rest_id) references restaurant(rest_id);
+     
+mysql> desc delivery;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| delivery_id     | int         | NO   | PRI | NULL    |       |
+| cust_id         | int         | YES  | MUL | NULL    |       |
+| distance        | varchar(10) | YES  |     | NULL    |       |
+| cust_add        | varchar(10) | YES  |     | NULL    |       |
+| rest_id         | int         | YES  | MUL | NULL    |       |
+| delivery_charge | int         | YES  |     | NULL    |       |
+| net_amt_fd_dlyy | int         | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+    
+    
