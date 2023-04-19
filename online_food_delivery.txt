@@ -51,5 +51,19 @@ mysql> desc customer;
       
       alter table orders
       add foreign key(cust_id) references customer(cust_id);
+      
+ mysql> desc orders;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| order_id     | int          | NO   | PRI | NULL    |       |
+| rest_id      | int          | YES  | MUL | NULL    |       |
+| cust_id      | int          | YES  | MUL | NULL    |       |
+| food_ordered | varchar(255) | YES  |     | NULL    |       |
+| pay_method   | varchar(255) | YES  |     | NULL    |       |
+| food_price   | int          | YES  |     | NULL    |       |
+| quantity     | int          | YES  |     | NULL    |       |
+| total        | int          | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
 ***********************************************************************************************************************************************************************
       
