@@ -167,7 +167,7 @@ insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5019,1009,3
      
      create table delivery(delivery_id int(10) primary key,
      cust_id int(10),
-     distance varchar(10),
+     distance int(100),
      cust_add varchar(10) ,
      rest_id int(10),
      delivery_charge int(100),
