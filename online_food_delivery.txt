@@ -15,6 +15,17 @@ mysql> desc restaurant;
 | rest_type  | varchar(100) | YES  |     | NULL    |       |
 | rest_catg  | varchar(255) | YES  |     | NULL    |       |
 +------------+--------------+------+-----+---------+-------+
+
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1001,"MULKI","8372738491","the_spice_root","3-star","veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1002,"PADUBIDRI","7372734491","curry_spoon","5-star","non-veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1003,"UDUPI","6472711491","suggi","2-star","veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1004,"KARKALA","7772738492","suraj","5-star","veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1005,"MANGLORE","6672730091","suvarna","7-star","non-veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1006,"NITTE","8372404491","down_town","5-star","non-veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1007,"UDUPI","9472744491","shreyas","2-star","veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1008,"KAPU","8872738492","swagath","5-star","veg");
+insert into restaurant(rest_id,rest_add,rest_phone,rest_name,rest_type,rest_catg) values(1009,"SURATHKAL","9572730091","benaka","7-star","non-veg");
+
 ***********************************************************************************************************************************************************************
     create table customer (cust_id int(10) primary key,
     cust_name varchar(255),
@@ -35,6 +46,23 @@ mysql> desc customer;
 | cust_add   | varchar(255) | YES  |     | NULL    |       |
 | rest_id    | int          | YES  | MUL | NULL    |       |
 +------------+--------------+------+-----+---------+-------+
+
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3001,"virat",6738190811,"puttur",1001);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3002,"rohit",8838000899,"sullia",1002);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3003,"dhoni",7712188874,"aduve",1003);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3004,"rahul",6638190809,"bajpe",1004);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3005,"yadhav",8938190822,"malpe",1005);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3006,"gambir",9538190811,"puttur",1006);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3007,"srujan",6738000899,"uchila",1007);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3008,"ramesh",7612188874,"belman",1008);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3009,"suresh",7838190809,"chowki",1009);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3010,"rony",9838190822,"mulki",1005);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3011,"tony",6738190811,"mulur",1001);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3012,"stark",8378000899,"nitte",1003);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3013,"peter",6812188874,"admar",1003);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3014,"parker",7738190809,"kodi",1004);
+insert into customer(cust_id,cust_name,cust_phone,cust_add,rest_id) values(3015,"goblin",7658190822,"kaikamba",1005);
+
 ***********************************************************************************************************************************************************************
 
       create table orders(order_id int(10) primary key,
@@ -65,6 +93,28 @@ mysql> desc customer;
 | quantity     | int          | YES  |     | NULL    |       |
 | total        | int          | YES  |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
+
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5001,1001,3001,"COD","paneer_masala",80,3);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5002,1002,3002,"UPI","chic_tikka",140,2);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5003,1003,3003,"COD","gobi",150,5);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5004,1004,3004,"UPI","biryani",200,3);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5005,1005,3005,"COD","egg_masala",250,5);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5006,1006,3006,"UPI","chic_tikka",140,6);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5007,1007,3007,"UPI","gobi",150,4);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5008,1008,3004,"UPI","biryani",200,7);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5009,1009,3005,"COD","egg_masala",250,6);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5010,1001,3005,"UPI","chic_tikka",140,4);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5011,1002,3003,"UPI","gobi",150,5);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5012,1002,3003,"UPI","biryani",200,3);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5013,1003,3005,"COD","egg_masala",250,4);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5014,1004,3004,"UPI","biryani",200,3);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5015,1005,3005,"COD","egg_masala",250,5);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5016,1006,3006,"UPI","chic_tikka",140,6);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5017,1007,3007,"UPI","gobi",150,4);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5018,1008,3004,"UPI","biryani",200,7);
+insert into orders(order_id,rest_id,cust_id,pay_method,food_ordered,food_price,quantity) values(5019,1009,3005,"COD","egg_masala",250,6);
+
+
 **********************************************************************************************************************************************************************      create table date_time(order_id int(10),
      rest_id int(10),
      cust_id int(10),
