@@ -1,0 +1,50 @@
+   create table restaurant (rest_id int(10) primary key,
+   rest_add varchar(255),
+   rest_phone varchar(255),
+   rest_name varchar(255),rest_type varchar(100),
+   rest_catg varchar(255));
+
+mysql> desc restaurant;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| rest_id    | int          | NO   | PRI | NULL    |       |
+| rest_add   | varchar(255) | YES  |     | NULL    |       |
+| rest_phone | varchar(255) | YES  |     | NULL    |       |
+| rest_name  | varchar(255) | YES  |     | NULL    |       |
+| rest_type  | varchar(100) | YES  |     | NULL    |       |
+| rest_catg  | varchar(255) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+***********************************************************************************************************************************************************************
+    create table customer (cust_id int(10) primary key,
+    cust_name varchar(255),
+    cust_phone varchar(255),
+    cust_add varchar(255),
+    rest_id int(10));
+   
+    alter table customer
+    add foreign key(rest_id) references restaurant(rest_id);
+
+mysql> desc customer;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| cust_id    | int          | NO   | PRI | NULL    |       |
+| cust_name  | varchar(255) | YES  |     | NULL    |       |
+| cust_phone | varchar(255) | YES  |     | NULL    |       |
+| cust_add   | varchar(255) | YES  |     | NULL    |       |
+| rest_id    | int          | YES  | MUL | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+***********************************************************************************************************************************************************************
+
+    create table orders(order_id int(10) primary key,
+    rest_id int(10) foreign key references restaurant(rest_id),
+    cust_id int(10) foreign key references customer(cust_id),
+    food_ordered varchar(255),
+    pay_method varchar(255),
+    food_price int(100),
+    quantity int(100),
+    total int(100));
+
+***********************************************************************************************************************************************************************
+      
