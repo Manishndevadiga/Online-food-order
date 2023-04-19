@@ -189,5 +189,21 @@ mysql> desc delivery;
 | delivery_charge | int         | YES  |     | NULL    |       |
 | net_amt_fd_dlyy | int         | YES  |     | NULL    |       |
 +-----------------+-------------+------+-----+---------+-------+
+
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7001,3001,8,"puttur",1001);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7002,3002,10,"sullia",1002);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7003,3003,5,"aduve",1003);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7004,3004,7,"bajpe",1004);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7005,3003,5,"aduve",1003);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7006,3003,5,"aduve",1003);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7007,3002,10,"sullia",1002);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7008,3008,8,"belman",1008);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7009,3009,10,"chowki",1009);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7010,3008,6,"belman",1008);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7011,3009,7,"chowki",1009);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7012,3005,15,"malpe",1005);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7013,3005,15,"malpe",1005);
+insert into delivery(delivery_id,cust_id,distance,cust_add,rest_id) values(7014,3010,4,"mulki",1005);
+
     
     
