@@ -141,6 +141,28 @@ mysql> desc date_time;
 | time     | time         | YES  |     | NULL    |       |
 | day      | varchar(100) | YES  |     | NULL    |       |
 +----------+--------------+------+-----+---------+-------+  
+
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5001,1001,3001,"2023/01/21","12:15:00","thursday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5002,1002,3002,"2023/05/06","02:10:00","monday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5003,1003,3003,"2022/02/17","05:00:00","saturday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5004,1004,3004,"2022/03/18","04:00:00","wednesday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5019,1009,3005,"2021/06/11","09:00:00","sunday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5018,1008,3004,"2023/01/21","12:15:00","saturday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5002,1002,3002,"2023/08/03","01:10:00","monday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5003,1003,3003,"2022/02/17","05:00:00","saturday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5004,1004,3004,"2022/03/18","04:00:00","wednesday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5019,1009,3005,"2021/06/11","09:00:00","sunday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5013,1003,3005,"2023/01/22","11:15:00","thursday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5002,1002,3002,"2023/05/06","02:10:00","monday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5003,1003,3003,"2022/04/19","05:00:00","saturday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5013,1003,3005,"2022/03/18","04:00:00","wednesday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5019,1009,3005,"2021/06/21","08:00:00","sunday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5001,1001,3001,"2023/01/21","12:15:00","wednesday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5016,1006,3006,"2023/05/06","02:10:00","monday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5003,1003,3003,"2022/02/19","05:00:00","friday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5004,1004,3004,"2022/05/18","06:00:00","wednesday");
+insert into date_time(order_id,rest_id,cust_id,date,time,day) values(5019,1009,3005,"2021/06/11","09:00:00","sunday");
+
  *********************************************************************************************************************************************************************** 
      
      create table delivery(delivery_id int(10) primary key,
